@@ -1,0 +1,26 @@
+# permissions to do edit performancemonitors.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: performancemonitor-editor-role
+rules:
+- apiGroups:
+  - pervcheck.k8s.accountr.eu
+  resources:
+  - performancemonitors
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - pervcheck.k8s.accountr.eu
+  resources:
+  - performancemonitors/status
+  verbs:
+  - get
+  - patch
+  - update

@@ -1,0 +1,7 @@
+domain: k8s.accountr.eu
+repo: github.com/daemonfire300/pervcheck
+resources:
+- group: pervcheck
+  kind: PerformanceMonitor
+  version: v1alpha1
+version: "2"
